@@ -20,7 +20,8 @@ Route::get('/', App\Http\Controllers\Movie\IndexController::class)->name('home.i
 Route::get('/movies/{movie}', App\Http\Controllers\Movie\ShowController::class)->name('home.show');
 Route::get('/profile', App\Http\Controllers\Profile\IndexController::class)->name('profile.index');
 Route::get('/friends/{user}', App\Http\Controllers\Profile\Friendcontroller::class)->name('profile.friend');
-Route::get('/watch/1', App\Http\Controllers\Movie\WatchController::class)->name('watch');
+Route::get('/watch/{movie}', App\Http\Controllers\Movie\WatchController::class)->name('watch');
 //Route::get('/buy', App\Http\Controllers\Movie\ShowController::class)->name('home.show');
 //Route::get('/friends', App\Http\Controllers\Movie\ShowController::class)->name('home.show');
 //Route::get('/friends/{friend}', App\Http\Controllers\Movie\ShowController::class)->name('home.show');
+Route::get('/back/{movie}', App\Http\Controllers\BackController::class)->name('back');

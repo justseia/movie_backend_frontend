@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-	<div class='player-container'>
-		<a href="#" class="close-video-player"><i class="ti-close"></i></a>
+	<div class='player-container' style="background-color: #000000;">
+		<a href="{{ route('back', $movie) }}" class="close-video-player"><i class="ti-close"></i></a>
 		<div class='player'>
 			<video id='video' src='{{ asset('assets/images/video.mp4') }}' playsinline></video>
 			<div class='play-btn-big'></div>

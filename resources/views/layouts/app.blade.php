@@ -16,13 +16,13 @@
 
 <div class="main-wrapper">
 
-	@if(!Route::is('login') && !Route::is('register'))
+	@if(!Route::is('login') && !Route::is('register') && !Route::is('watch'))
 		<x-header/>
 	@endif
 
 	@yield('content')
 
-	@if(!Route::is('login') && !Route::is('register'))
+	@if(!Route::is('login') && !Route::is('register') && !Route::is('watch'))
 		<x-footer/>
 	@endif
 

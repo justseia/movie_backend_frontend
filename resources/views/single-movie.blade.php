@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 text-left mb-4 mt-4">
-                    <h2>The Crew</h2>
+                    <h2>Find Friends</h2>
                 </div>
             </div>
             <div class="row">

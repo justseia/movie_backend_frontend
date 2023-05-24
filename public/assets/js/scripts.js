@@ -17,7 +17,7 @@ $(document).ready(function() {
         loop:false,
         margin:25,
         nav:false,
-        autoplay:false,  
+        autoplay:false,
         dots:false,
         items:3,
         responsive:{
@@ -42,28 +42,28 @@ $(document).ready(function() {
         loop:true,
         margin:15,
         nav:false,
-        autoplay:true,  
+        autoplay:true,
         dots:true,
-        items:1        
+        items:1
     })
     $('.feedback-slider').owlCarousel({
         loop:true,
         margin:15,
         nav:false,
-        autoplay:true,  
+        autoplay:true,
         dots:true,
-        items:1        
+        items:1
     })
- 
+
 
     $('.slide-slider').owlCarousel({
         loop:true,
         margin:15,
         nav:true,
-        autoplay:false,  
+        autoplay:false,
         dots:false,
         items:4,
-        navText:['<img src="images/left.png" alt="icon" />','<img src="images/right.png" alt="icon" />'],
+        navText:['<img src="assets/images/left.png" alt="icon" />','<img src="assets/images/right.png" alt="icon" />'],
         responsive:{
             0:{
                 items:2,
@@ -74,7 +74,7 @@ $(document).ready(function() {
             1200:{
                 items:4,
             }
-            
+
         }
     })
 
@@ -82,7 +82,7 @@ $(document).ready(function() {
         loop:true,
         margin:15,
         nav:true,
-        autoplay:false,  
+        autoplay:false,
         dots:false,
         items:5,
         navText:['<img src="images/left.png" alt="icon" />','<img src="images/right.png" alt="icon" />'],
@@ -100,14 +100,14 @@ $(document).ready(function() {
                 items:5,
             }
         }
-         
+
     })
 
     $('.category-slider').owlCarousel({
         loop:true,
         margin:10,
         nav:false,
-        autoplay:false,  
+        autoplay:false,
         dots:false,
         items:6,
         responsive:{
@@ -123,14 +123,14 @@ $(document).ready(function() {
             1600:{
                 items:6,
             }
-        }       
-         
+        }
+
     })
     $('.team-slider').owlCarousel({
         loop:true,
         margin:15,
         nav:false,
-        autoplay:false,  
+        autoplay:false,
         dots:false,
         items:7     ,
         responsive:{
@@ -146,15 +146,15 @@ $(document).ready(function() {
             1600:{
                 items:7,
             }
-        }    
-         
+        }
+
     })
 
     $('.team-slider-full').owlCarousel({
         loop:false,
         margin:15,
         nav:false,
-        autoplay:false,  
+        autoplay:false,
         dots:false,
         items:9 ,
         responsive:{
@@ -170,8 +170,8 @@ $(document).ready(function() {
             1600:{
                 items:9,
             }
-        }      
-         
+        }
+
     })
 
     $('.member-bttn2').on('click', function() {
@@ -209,21 +209,21 @@ $(document).ready(function() {
         $('.player-container').fadeOut();
         return false;
     });
-    
 
-    
-    
+
+
+
 
     $('.switchcolor').on('click', function() {
         $(this).addClass('active');
         $('.backdrop').addClass('active');
-        $('.switchcolor-wrap').addClass('active'); 
+        $('.switchcolor-wrap').addClass('active');
     });
 
     $('.sheet-close,.backdrop').on('click', function() {
         $('.switchcolor').removeClass('active');
         $('.backdrop').removeClass('active');
-        $('.switchcolor-wrap').removeClass('active'); 
+        $('.switchcolor-wrap').removeClass('active');
     });
 
     $('.toggle input').on('change', function () {
@@ -253,7 +253,7 @@ function PageScroll() {
         $("html, body").stop().animate({
             scrollTop: $($anchor.attr("href")).offset().top - 0
         }, 1500, 'easeInOutExpo');
-        $('.overlay-section').removeClass('active'); 
+        $('.overlay-section').removeClass('active');
         e.preventDefault();
 
     });

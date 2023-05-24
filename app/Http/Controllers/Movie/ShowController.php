@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Movie;
 
 use App\Http\Controllers\Controller;
+use App\Models\FindFriend;
 use App\Models\Movie;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -12,7 +13,7 @@ class ShowController extends Controller
 {
     public function __invoke(Movie $movie)
     {
-        $users = User::all()->except(Auth::id());
+        $users = FindFriend::all()->except(Auth::id());
         return view('single-movie')->with(compact('movie'))->with(compact('users'));
     }
 }

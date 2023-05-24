@@ -565,6 +565,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'overtrue/laravel-favorite' => array(
+            'pretty_version' => '5.1.0',
+            'version' => '5.1.0.0',
+            'reference' => '1faf026de253721f3424befe9e39cd4a5ecb5212',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../overtrue/laravel-favorite',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'paragonie/random_compat' => array(
             'pretty_version' => 'v9.99.100',
             'version' => '9.99.100.0',

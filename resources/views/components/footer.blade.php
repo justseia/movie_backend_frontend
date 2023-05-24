@@ -1,16 +1,6 @@
 <div class="footer-wrapper">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 text-left">
-				<h4 class="mb-4">We are digital agency, a small design agency based in paris as i was groping to remove the chain from about my victim’s neck only through language.</h4>
-			</div>
-			<div class="col-sm-6 text-left"></div>
-			<div class="col-sm-5 offset-sm-1 text-right">
-				<form action="#" class="mt-0">
-					<input type="text" placeholder="Email">
-					<button>Submit</button>
-				</form>
-			</div>
 			<div class="col-sm-12">
 				<div class="middle-footer">
 					<div class="row">

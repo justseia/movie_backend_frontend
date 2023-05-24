@@ -23,8 +23,8 @@
 							<form action="{{ route('login') }}" method="post">
 								@csrf
 								<div class="form-group mt-5">
-									<input name="email" class="form-control" type="email" placeholder="Email address">
-									<input name="password" class="form-control" type="password" placeholder="Password">
+									<input name="email" class="form-control" type="email" placeholder="Email address" style="color: #000;">
+									<input name="password" class="form-control" type="password" placeholder="Password" style="color: #000;">
 								</div>
 								<div class="form-group form-check-label">
 									<label for="tarms-check">

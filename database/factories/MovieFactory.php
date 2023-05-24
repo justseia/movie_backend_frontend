@@ -21,6 +21,7 @@ class MovieFactory extends Factory
             'body' => fake()->text(),
             'image' => fake()->imageUrl(),
             'url' => fake()->url(),
+            'type_id' => fake()->numberBetween(1, 3),
         ];
     }
 }

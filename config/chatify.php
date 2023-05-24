@@ -55,7 +55,7 @@ return [
     */
     'user_avatar' => [
         'folder' => 'users-avatar',
-        'default' => 'avatar.png',
+        'default' => 'https://api.dicebear.com/6.x/fun-emoji/svg',
     ],
 
     /*

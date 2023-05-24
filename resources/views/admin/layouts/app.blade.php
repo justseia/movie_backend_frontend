@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tandyr</title>
-    <link rel="favicon" href="{{ asset('assets/img/favicon.png') }}">
+    <title>Ezytick</title>
+    <link rel="icon" href="{{ asset('assets/images/favicon.png') }}">
     @vite('resources/css/app.css')
 </head>
 
@@ -14,7 +14,7 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center justify-start">
                     <a href="{{ route('admin.index') }}" class="ml-4 text-md font-semibold flex items-center lg:mr-1.5">
-                        <span class="self-center hidden text-xl font-bold md:inline-block whitespace-nowrap">Alemtime</span>
+                        <span class="self-center hidden text-xl font-bold md:inline-block whitespace-nowrap">Ezytick</span>
                     </a>
                 </div>
                 <div class="ml-3">
@@ -35,9 +35,6 @@
                                 <a href="{{ route('admin.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Главный</a>
                                 <a href="{{ route('admin.posts') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Посты</a>
                                 <a href="{{ route('admin.users') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Пользователи</a>
-                                <a href="{{ route('admin.ad') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Реклама</a>
-                                <a href="{{ route('admin.quote') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Цитаты</a>
-                                <a href="{{ route('admin.category') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Категроии</a>
                                 <a href="{{ route('admin.deleted') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Удаленный посты</a>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Выйти</a>
                                 <form id="logout-form" class="hidden" action="{{ route('logout') }}" method="POST">
@@ -182,48 +179,6 @@
             deleteUserWindow.classList.toggle("hidden")
             const deleteUserForm = document.querySelector("#deleteUserForm")
             deleteUserForm.action = '{{ route('admin.users.delete', '') }}' + '/' + id
-        }
-
-        // Add Ad
-        function addAd() {
-            const addAdWindow = document.querySelector("#addAdWindow")
-            addAdWindow.classList.toggle("hidden")
-        }
-
-        // Delete Ad
-        function deleteAd(id) {
-            const deleteAdWindow = document.querySelector("#deleteAdWindow")
-            deleteAdWindow.classList.toggle("hidden")
-            const deleteAdForm = document.querySelector("#deleteAdForm")
-            deleteAdForm.action = '{{ route('admin.ad.delete', '') }}' + '/' + id
-        }
-
-        // Add Quote
-        function addQuote() {
-            const addQuoteWindow = document.querySelector("#addQuoteWindow")
-            addQuoteWindow.classList.toggle("hidden")
-        }
-
-        // Delete Quote
-        function deleteQuote(id) {
-            const deleteQuoteWindow = document.querySelector("#deleteQuoteWindow")
-            deleteQuoteWindow.classList.toggle("hidden")
-            const deleteQuoteForm = document.querySelector("#deleteQuoteForm")
-            deleteQuoteForm.action = '{{ route('admin.quote.delete', '') }}' + '/' + id
-        }
-
-        // Add Category
-        function addCategory() {
-            const addCategoryWindow = document.querySelector("#addCategoryWindow")
-            addCategoryWindow.classList.toggle("hidden")
-        }
-
-        // Delete Category
-        function deleteCategory(id) {
-            const deleteCategoryWindow = document.querySelector("#deleteCategoryWindow")
-            deleteCategoryWindow.classList.toggle("hidden")
-            const deleteCategoryForm = document.querySelector("#deleteCategoryForm")
-            deleteCategoryForm.action = '{{ route('admin.category.delete', '') }}' + '/' + id
         }
 
         // Deleted Post

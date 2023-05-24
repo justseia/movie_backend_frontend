@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-//Route::get('/', App\Http\Controllers\Movie\IndexController::class)->name('home.index');
+Route::get('/', App\Http\Controllers\Movie\IndexController::class)->name('home.index');
 Route::get('/all/{movie}', App\Http\Controllers\Movie\ShowController::class)->name('home.show');
 Route::post('/all/friend/{movie}', [App\Http\Controllers\AllController::class, 'find_friend'])->name('home.friend');
 Route::get('/all/watch/{movie}', App\Http\Controllers\Movie\WatchController::class)->name('watch');
@@ -31,7 +31,8 @@ Route::get('/event', [App\Http\Controllers\AllController::class, 'event'])->name
 Route::get('/theater', [App\Http\Controllers\AllController::class, 'theater'])->name('theater.index');
 Route::get('/back/{movie}', App\Http\Controllers\BackController::class)->name('back');
 
-Route::name('admin.')->prefix('admin')->group(function () {
+
+Route::name('admin.')->middleware('auth')->prefix('admin')->group(function () {
     Route::get('/', \App\Http\Controllers\Admin\Post\InactiveController::class)->name('index');
     Route::get('/posts', \App\Http\Controllers\Admin\Post\IndexController::class)->name('posts');
     Route::get('/posts/{post}', \App\Http\Controllers\Admin\Post\ShowController::class)->name('posts.show');

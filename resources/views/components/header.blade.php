@@ -25,7 +25,7 @@
                         <div class="user-menu">
                             <ul>
                                 <li><a href="{{ route('profile.index') }}"><i class="ti-user"></i>My Profile</a></li>
-                                <li><a href="{{ route('favorite.index') }}"><i class="ti-heart"></i>Buyed</a></li>
+                                <li><a href="{{ route('favorite.index') }}"><i class="ti-ticket"></i>Buyed</a></li>
                                 <li><a href="{{ route('favorite.index') }}"><i class="ti-heart"></i>My Favorites</a></li>
                                 <li><a href="{{ route('privacy-policy.index') }}"><i class="ti-world"></i>Privacy Policy</a></li>
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-power-off"></i>Log Out</a></li>

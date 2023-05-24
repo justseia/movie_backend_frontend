@@ -41,19 +41,19 @@
 							</tr>
 							</thead>
 							<tbody class="bg-white divide-y divide-gray-200">
-							@foreach($posts as $post)
+							@foreach($movies as $movie)
 								<tr class="hover:bg-gray-100">
-									<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">#{{$post->id}}</td>
+									<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">#{{$movie->id}}</td>
 									<td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
-										<div class="text-base font-semibold text-gray-900 w-[300px] line-clamp-1">{{$post->name}}</div>
+										<div class="text-base font-semibold text-gray-900 w-[300px] line-clamp-1">{{$movie->name}}</div>
 									</td>
-									<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{$post->created_at->isoFormat('LL')}}</td>
+									<td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{$movie->created_at->isoFormat('LL')}}</td>
 									<td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
-										<a href="{{route('admin.posts.show', $post)}}" class="getPost inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 hover:text-gray-900 hover:scale-[1.02] transition-all">
+										<a href="{{route('admin.posts.show', $movie)}}" class="getmovie inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 hover:text-gray-900 hover:scale-[1.02] transition-all">
 											<i class="far fa-edit mr-2"></i>
 											Посмотреть
 										</a>
-										<a href="javascript:deletePost({{$post->id}})" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-800 hover:scale-[1.02] transition-all">
+										<a href="javascript:deletemovie({{$movie->id}})" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-800 hover:scale-[1.02] transition-all">
 											<i class="fas fa-trash mr-2"></i>
 											Удалить
 										</a>
@@ -68,20 +68,20 @@
 		</div>
 	</main>
 
-	<div id="deletePostWindow" class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-100 bg-opacity-75 top-4 md:inset-0 h-modal sm:h-full">
+	<div id="deletemovieWindow" class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-100 bg-opacity-75 top-4 md:inset-0 h-modal sm:h-full">
 		<div class="absolute w-full h-full max-w-md px-4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:h-auto">
 			<div class="relative bg-white shadow-lg rounded-2xl">
 				<div class="p-6 pt-0 text-center">
 					<i class="far fa-exclamation-circle text-[70px] text-red-500 mt-6"></i>
 					<h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Вы уверены, что хотите удалить этот пост?</h3>
-					<form id="deletePostForm" action="" method="post" class="inline-flex">
+					<form id="deletemovieForm" action="" method="movie" class="inline-flex">
 						@csrf
 						@method('delete')
 						<button type="submit" class="text-white bg-red-500 font-medium rounded-lg text-base inline-flex items-center px-3 py-2.5 text-center mr-2 hover:scale-[1.02] transition-all">
 							Да
 						</button>
 					</form>
-					<a href="javascript:deletePost(0)" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center hover:scale-[1.02] transition-transform">
+					<a href="javascript:deletemovie(0)" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center hover:scale-[1.02] transition-transform">
 						Нет
 					</a>
 				</div>

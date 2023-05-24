@@ -1,4 +1,4 @@
-<title>{{ config('chatify.name') }}</title>
+<title>Ezytick</title>
 
 {{-- Meta tags --}}
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,6 +6,7 @@
 <meta name="messenger-color" content="{{ $messengerColor }}">
 <meta name="messenger-theme" content="{{ $dark_mode }}">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="icon" href="{{ asset('assets/images/favicon.png') }}">
 <meta name="url" content="{{ url('').'/'.config('chatify.routes.prefix') }}" data-user="{{ Auth::user()->id }}">
 
 {{-- scripts --}}

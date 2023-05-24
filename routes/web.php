@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', App\Http\Controllers\Movie\IndexController::class)->name('home.index');
+//Route::get('/', App\Http\Controllers\Movie\IndexController::class)->name('home.index');
 Route::get('/all/{movie}', App\Http\Controllers\Movie\ShowController::class)->name('home.show');
 Route::post('/all/friend/{movie}', [App\Http\Controllers\AllController::class, 'find_friend'])->name('home.friend');
 Route::get('/all/watch/{movie}', App\Http\Controllers\Movie\WatchController::class)->name('watch');

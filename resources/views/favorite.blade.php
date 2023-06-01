@@ -24,9 +24,9 @@
                                     <form action="{{ route('favorite.delete', $favorite) }}" method="post">
                                         @csrf
                                         <button type="submit" style="background-color: #00000000;border: 0px;">
-                                            <img src="{{ asset('assets/images/plus.png') }}" alt="icon" style="position: absolute;top: 25px;right: 10px;">
+                                            <img src="{{ asset('assets/images/minus.png') }}" alt="icon" style="position: absolute;top: 25px;right: 10px;">
                                         </button>
-                                    </form>s
+                                    </form>
                                 </h2>
                                 <p style="-webkit-line-clamp: 3;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $favorite->body }}</p>
                             </div>

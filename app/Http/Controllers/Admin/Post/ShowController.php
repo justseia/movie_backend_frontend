@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Post;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Movie;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -14,11 +15,9 @@ class ShowController extends Controller
         $this->middleware('auth');
     }
 
-    public function __invoke(Post $post)
+    public function __invoke(Movie $post)
     {
-        $categories = Category::all();
         return view('admin.post')
-            ->with(compact('categories'))
             ->with(compact('post'));
     }
 }

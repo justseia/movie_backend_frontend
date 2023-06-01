@@ -10,8 +10,8 @@
                             <div class="owl-items">
                                 <div class="banner-wrap justify-content-between align-items-center">
                                     <div class="left-wrap">
-                                        <h2>{{ $movie->name }}</h2>
-                                        <p>{{ $movie->body }}</p>
+                                        <h2 style="-webkit-line-clamp: 2;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $movie->name }}</h2>
+                                        <p style="-webkit-line-clamp: 3;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $movie->body }}</p>
                                         <a href="#" class="btn btn-lg btn-video"><img src="{{ asset('assets/images/play.png') }}" alt="icn">Trailer</a>
                                     </div>
                                     <div class="right-wrap" style="background-image: url({{ $movie->image }});"></div>

@@ -7,29 +7,22 @@
                 <div class="col-sm-12">
                     <div class="banner-wrap justify-content-between align-items-center">
                         <div class="left-wrap">
-                            <h2>{{ $movie->name }}</h2>
-                            <p>{{ $movie->body }}</p>
+                            <h2 style="-webkit-line-clamp: 2;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $movie->name }}</h2>
+                            <p style="-webkit-line-clamp: 2;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $movie->body }}</p>
                             <div class="row g-3">
-                                <a href="{{ route('watch', $movie) }}" class="btn btn-lg col-4">
-                                    <img src="{{ asset('assets/images/play.png') }}" alt="icn">
-                                    Trailer
-                                </a>
-                                <form class="col-4" action="{{ route('home.friend', $movie) }}" method="post">
+                                @if($movie->type_id == 1)
+                                    <a href="{{ route('watch', $movie) }}" class="btn btn-lg col-4">
+                                        <img src="{{ asset('assets/images/play.png') }}" alt="icn">
+                                        Movie
+                                    </a>
+                                @endif
+                                <form action="{{ route('home.friend', $movie) }}" method="post">
                                     @csrf
-                                    <button type="submit" class="btn btn-lg">Find Friend</button>
+                                    <button type="submit" class="btn btn-lg col-4">Find Friend</button>
                                 </form>
-                                <a href="{{ route('watch', $movie) }}" class="btn btn-lg col-4">
+                                <a href="{{ route('movie.buy.index', $movie) }}" class="btn btn-lg col-4">
                                     Buy Ticket
                                 </a>
-                            </div>
-                            <a href="#" class="icon-bttn"><i class="ti-plus text-white"></i></a>
-                            <div class="icon-bttn" style="margin-bottom: 20px;">
-                                <i class="ti-sharethis text-white mr-4"></i>
-                                <div class="share-icons">
-                                    <a href="#"><i class="ti-facebook"></i></a>
-                                    <a href="#"><i class="ti-twitter-alt"></i></a>
-                                    <a href="#"><i class="mr-0 ti-pinterest"></i></a>
-                                </div>
                             </div>
                         </div>
                         <div class="right-wrap" style="background-image: url({{ $movie->image }});"></div>

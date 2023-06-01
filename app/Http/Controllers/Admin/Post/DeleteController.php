@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Post;
 
 use App\Http\Controllers\Controller;
+use App\Models\Movie;
 use App\Models\Post;
 use App\Models\Restauran;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class DeleteController extends Controller
         $this->middleware('auth');
     }
 
-    public function __invoke(Restauran $post)
+    public function __invoke(Movie $post)
     {
         $post->delete();
         return redirect()->back()

@@ -16,12 +16,12 @@
                             <li>
                                 <div class="flex items-center">
                                     <i class="mx-2 text-gray-400 fas fa-angle-right"></i>
-                                    <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2 line-clamp-1">Пост</span>
+                                    <span class="ml-1 text-sm font-medium text-gray-400 md:ml-2 line-clamp-1">Фильмы и Театры</span>
                                 </div>
                             </li>
                         </ol>
                     </nav>
-                    <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">Пост</h1>
+                    <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">Фильмы и Театры</h1>
                 </div>
             </div>
         </div>
@@ -33,12 +33,12 @@
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-12">
                                 <div class="max-w-[400px] items-center sm:flex xl:block 2xl:flex sm:space-x-4 xl:space-x-0 2xl:space-x-4">
-                                    <img class="w-full h-[300px] rounded-lg object-cover" src="{{ $post->photo }}" alt="img">
+                                    <img class="w-full h-[300px] rounded-lg object-cover" src="{{ $post->image }}" alt="img">
                                 </div>
                             </div>
                             <div class="col-span-12">
                                 <label for="" class="block mb-2 text-sm font-medium text-gray-900">Заголовок</label>
-                                <input value="{{ $post->title }}" type="text" name="title" id="first-name" class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
+                                <input value="{{ $post->name }}" type="text" name="title" id="first-name" class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
                             </div>
                             <div class="col-span-12">
                                 <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900">Описание</label>

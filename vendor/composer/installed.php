@@ -574,6 +574,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'overtrue/laravel-follow' => array(
+            'pretty_version' => '5.1.0',
+            'version' => '5.1.0.0',
+            'reference' => '47482cb257f0ebe6842d1f7f4ef0770294e8c74a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../overtrue/laravel-follow',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'paragonie/random_compat' => array(
             'pretty_version' => 'v9.99.100',
             'version' => '9.99.100.0',

@@ -18,12 +18,30 @@
                                     <div class="slide-content">
                                         <h2 style="-webkit-line-clamp: 1;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;width: 90%;">
                                             {{ $trailer->name }}
-                                            <form action="{{ route('favorite.add', $trailer) }}" method="post">
-                                                @csrf
-                                                <button type="submit" style="background-color: #00000000;border: 0px;">
-                                                    <img src="{{ asset('assets/images/plus.png') }}" alt="icon" style="position: absolute;top: 25px;right: 10px;">
-                                                </button>
-                                            </form>
+                                            @auth
+                                                @if($trailer->isFavoritedBy(auth()->user()))
+                                                    <form action="{{ route('favorite.add', $trailer) }}" method="post">
+                                                        @csrf
+                                                        <button type="submit" style="background-color: #00000000;border: 0px;">
+                                                            <img src="{{ asset('assets/images/minus.png') }}" alt="icon" style="position: absolute;top: 25px;right: 10px;">
+                                                        </button>
+                                                    </form>
+                                                @else
+                                                    <form action="{{ route('favorite.add', $trailer) }}" method="post">
+                                                        @csrf
+                                                        <button type="submit" style="background-color: #00000000;border: 0px;">
+                                                            <img src="{{ asset('assets/images/plus.png') }}" alt="icon" style="position: absolute;top: 25px;right: 10px;">
+                                                        </button>
+                                                    </form>
+                                                @endif
+                                            @else
+                                                <form action="{{ route('favorite.add', $trailer) }}" method="post">
+                                                    @csrf
+                                                    <button type="submit" style="background-color: #00000000;border: 0px;">
+                                                        <img src="{{ asset('assets/images/plus.png') }}" alt="icon" style="position: absolute;top: 25px;right: 10px;">
+                                                    </button>
+                                                </form>
+                                            @endauth
                                         </h2>
                                         <p style="-webkit-line-clamp: 3;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $trailer->body }}</p>
                                     </div>

@@ -4,32 +4,32 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
+class ComposerStaticInit7c4c37f33837fd6e0340d46989afdaa8
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
-        '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
@@ -107,6 +107,7 @@ class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
         ),
         'O' => 
         array (
+            'Overtrue\\LaravelFollow\\' => 23,
             'Overtrue\\LaravelFavorite\\' => 25,
         ),
         'N' => 
@@ -376,6 +377,10 @@ class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
+        'Overtrue\\LaravelFollow\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/overtrue/laravel-follow/src',
+        ),
         'Overtrue\\LaravelFavorite\\' => 
         array (
             0 => __DIR__ . '/..' . '/overtrue/laravel-favorite/src',
@@ -536,6 +541,18 @@ class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Admin\\Deleted\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Deleted/IndexController.php',
+        'App\\Http\\Controllers\\Admin\\Deleted\\UpdateController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Deleted/UpdateController.php',
+        'App\\Http\\Controllers\\Admin\\Post\\DeleteController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Post/DeleteController.php',
+        'App\\Http\\Controllers\\Admin\\Post\\InactiveController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Post/InactiveController.php',
+        'App\\Http\\Controllers\\Admin\\Post\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Post/IndexController.php',
+        'App\\Http\\Controllers\\Admin\\Post\\ShowController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Post/ShowController.php',
+        'App\\Http\\Controllers\\Admin\\Post\\StoreController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Post/StoreController.php',
+        'App\\Http\\Controllers\\Admin\\Post\\UpdateController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Post/UpdateController.php',
+        'App\\Http\\Controllers\\Admin\\User\\DeleteController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/User/DeleteController.php',
+        'App\\Http\\Controllers\\Admin\\User\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/User/IndexController.php',
+        'App\\Http\\Controllers\\Admin\\User\\StoreController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/User/StoreController.php',
+        'App\\Http\\Controllers\\AllController' => __DIR__ . '/../..' . '/app/Http/Controllers/AllController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -544,6 +561,7 @@ class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\BackController' => __DIR__ . '/../..' . '/app/Http/Controllers/BackController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FavoriteController' => __DIR__ . '/../..' . '/app/Http/Controllers/FavoriteController.php',
         'App\\Http\\Controllers\\Movie\\IndexController' => __DIR__ . '/../..' . '/app/Http/Controllers/Movie/IndexController.php',
         'App\\Http\\Controllers\\Movie\\ShowController' => __DIR__ . '/../..' . '/app/Http/Controllers/Movie/ShowController.php',
         'App\\Http\\Controllers\\Movie\\WatchController' => __DIR__ . '/../..' . '/app/Http/Controllers/Movie/WatchController.php',
@@ -561,6 +579,7 @@ class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\ChFavorite' => __DIR__ . '/../..' . '/app/Models/ChFavorite.php',
         'App\\Models\\ChMessage' => __DIR__ . '/../..' . '/app/Models/ChMessage.php',
+        'App\\Models\\FindFriend' => __DIR__ . '/../..' . '/app/Models/FindFriend.php',
         'App\\Models\\Movie' => __DIR__ . '/../..' . '/app/Models/Movie.php',
         'App\\Models\\MovieOrder' => __DIR__ . '/../..' . '/app/Models/MovieOrder.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -3476,6 +3495,13 @@ class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
         'Overtrue\\LaravelFavorite\\FavoriteServiceProvider' => __DIR__ . '/..' . '/overtrue/laravel-favorite/src/FavoriteServiceProvider.php',
         'Overtrue\\LaravelFavorite\\Traits\\Favoriteable' => __DIR__ . '/..' . '/overtrue/laravel-favorite/src/Traits/Favoriteable.php',
         'Overtrue\\LaravelFavorite\\Traits\\Favoriter' => __DIR__ . '/..' . '/overtrue/laravel-favorite/src/Traits/Favoriter.php',
+        'Overtrue\\LaravelFollow\\Events\\Event' => __DIR__ . '/..' . '/overtrue/laravel-follow/src/Events/Event.php',
+        'Overtrue\\LaravelFollow\\Events\\Followed' => __DIR__ . '/..' . '/overtrue/laravel-follow/src/Events/Followed.php',
+        'Overtrue\\LaravelFollow\\Events\\Unfollowed' => __DIR__ . '/..' . '/overtrue/laravel-follow/src/Events/Unfollowed.php',
+        'Overtrue\\LaravelFollow\\FollowServiceProvider' => __DIR__ . '/..' . '/overtrue/laravel-follow/src/FollowServiceProvider.php',
+        'Overtrue\\LaravelFollow\\Followable' => __DIR__ . '/..' . '/overtrue/laravel-follow/src/Followable.php',
+        'Overtrue\\LaravelFollow\\Traits\\Followable' => __DIR__ . '/..' . '/overtrue/laravel-follow/src/Traits/Followable.php',
+        'Overtrue\\LaravelFollow\\Traits\\Follower' => __DIR__ . '/..' . '/overtrue/laravel-follow/src/Traits/Follower.php',
         'PHPUnit\\Event\\Application\\Finished' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Finished.php',
         'PHPUnit\\Event\\Application\\FinishedSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/FinishedSubscriber.php',
         'PHPUnit\\Event\\Application\\Started' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Started.php',
@@ -6373,10 +6399,10 @@ class ComposerStaticInitf4c52460d8c3481ec2568af793c6b412
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf4c52460d8c3481ec2568af793c6b412::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf4c52460d8c3481ec2568af793c6b412::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf4c52460d8c3481ec2568af793c6b412::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf4c52460d8c3481ec2568af793c6b412::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7c4c37f33837fd6e0340d46989afdaa8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7c4c37f33837fd6e0340d46989afdaa8::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7c4c37f33837fd6e0340d46989afdaa8::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit7c4c37f33837fd6e0340d46989afdaa8::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -15,7 +15,7 @@
 							</li>
 						</ol>
 					</nav>
-					<h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">Restauran</h1>
+					<h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">Все фильмы и театры</h1>
 				</div>
 			</div>
 		</div>
@@ -53,7 +53,7 @@
 											<i class="far fa-edit mr-2"></i>
 											Посмотреть
 										</a>
-										<a href="javascript:deletemovie({{$movie->id}})" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-800 hover:scale-[1.02] transition-all">
+										<a href="javascript:deletePost({{$movie->id}})" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-800 hover:scale-[1.02] transition-all">
 											<i class="fas fa-trash mr-2"></i>
 											Удалить
 										</a>
@@ -68,20 +68,20 @@
 		</div>
 	</main>
 
-	<div id="deletemovieWindow" class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-100 bg-opacity-75 top-4 md:inset-0 h-modal sm:h-full">
+	<div id="deletePostWindow" class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-100 bg-opacity-75 top-4 md:inset-0 h-modal sm:h-full">
 		<div class="absolute w-full h-full max-w-md px-4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:h-auto">
 			<div class="relative bg-white shadow-lg rounded-2xl">
 				<div class="p-6 pt-0 text-center">
 					<i class="far fa-exclamation-circle text-[70px] text-red-500 mt-6"></i>
-					<h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Вы уверены, что хотите удалить этот пост?</h3>
-					<form id="deletemovieForm" action="" method="movie" class="inline-flex">
+					<h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Вы уверены, что хотите удалить этот?</h3>
+					<form id="deletePostForm" action="" method="post" class="inline-flex">
 						@csrf
 						@method('delete')
 						<button type="submit" class="text-white bg-red-500 font-medium rounded-lg text-base inline-flex items-center px-3 py-2.5 text-center mr-2 hover:scale-[1.02] transition-all">
 							Да
 						</button>
 					</form>
-					<a href="javascript:deletemovie(0)" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center hover:scale-[1.02] transition-transform">
+					<a href="javascript:deletePost(0)" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 font-medium inline-flex items-center rounded-lg text-base px-3 py-2.5 text-center hover:scale-[1.02] transition-transform">
 						Нет
 					</a>
 				</div>

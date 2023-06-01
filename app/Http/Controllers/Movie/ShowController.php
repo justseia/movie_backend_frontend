@@ -13,7 +13,7 @@ class ShowController extends Controller
 {
     public function __invoke(Movie $movie)
     {
-        $users = FindFriend::all()->except(Auth::id());
+        $users = FindFriend::where('movie_id', $movie->id)->get();
         return view('single-movie')->with(compact('movie'))->with(compact('users'));
     }
 }

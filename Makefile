@@ -14,3 +14,7 @@ git:
 	git add .
 	git commit -m 'update'
 	git push
+
+c:
+	php artisan cache:clear
+	php artisan route:cache

@@ -12825,7 +12825,7 @@ label.error {
   font-size: 30px;
   margin-right: 10px;
   position: relative;
-  top: 32px;
+  top: 25px;
   margin-right: 10px;
   color: #333;
   position: absolute;
@@ -12853,7 +12853,7 @@ label.error {
   }
 }
 .accordion .card button.small-text:after {
-  top: 33px;
+  top: 25px;
 }
 .accordion .card button.collapsed:after {
   transform: rotate(0deg);

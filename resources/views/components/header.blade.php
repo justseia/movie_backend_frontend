@@ -12,7 +12,7 @@
                     <ul class="navbar-nav nav-menu float-none text-center">
                         <li class="nav-item"><a class="nav-link" href="{{ route('home.index') }}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('chatify') }}">Chat</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('trailer.index') }}">Trailers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('trailer.index') }}">Movie</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('event.index') }}">Events</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('theater.index') }}">Theaters</a></li>
                     </ul>
@@ -25,7 +25,8 @@
                         <div class="user-menu">
                             <ul>
                                 <li><a href="{{ route('profile.index') }}"><i class="ti-user"></i>My Profile</a></li>
-                                <li><a href="{{ route('favorite.index') }}"><i class="ti-ticket"></i>Buyed</a></li>
+                                <li><a href="{{ route('friend.list') }}"><i class="ti-face-smile"></i>My Friends</a></li>
+                                <li><a href="{{ route('purchased-tickets.index') }}"><i class="ti-ticket"></i>My tickets</a></li>
                                 <li><a href="{{ route('favorite.index') }}"><i class="ti-heart"></i>My Favorites</a></li>
                                 <li><a href="{{ route('privacy-policy.index') }}"><i class="ti-world"></i>Privacy Policy</a></li>
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-power-off"></i>Log Out</a></li>
@@ -42,9 +43,11 @@
                         </div>
                     </a>
                 @endauth
-                <div class="search-div">
-                    <input type="search" placeholder="Seacrh">
-                </div>
+                <form action="{{ route('search.index') }}">
+                    <div class="search-div">
+                        <input name="search" type="search" placeholder="Seacrh">
+                    </div>
+                </form>
             </div>
         </div>
     </div>

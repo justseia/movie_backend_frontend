@@ -23,7 +23,7 @@
                             <form action="{{ route('register') }}" method="post">
                                 @csrf
                                 <div class="form-group mt-5">
-                                    <input name="email" class="form-control" type="email" placeholder="Email address" style="color: #000;">
+                                    <input name="email" class="form-control" type="text" placeholder="Email address" style="color: #000;">
                                     <input name="name" class="form-control" type="text" placeholder="Name" style="color: #000;">
                                     <input name="password" class="form-control" type="password" placeholder="Password" style="color: #000;">
                                 </div>

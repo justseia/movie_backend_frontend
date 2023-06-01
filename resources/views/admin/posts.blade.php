@@ -139,7 +139,7 @@
 			<div class="relative bg-white shadow-lg rounded-2xl">
 				<div class="p-6 pt-0 text-center">
 					<i class="far fa-exclamation-circle text-[70px] text-red-500 mt-6"></i>
-					<h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Вы уверены, что хотите удалить этот пост?</h3>
+					<h3 class="mt-5 mb-6 text-xl font-normal text-gray-500">Вы уверены, что хотите удалить это?</h3>
 					<form id="deletePostForm" action="" method="post" class="inline-flex">
 						@csrf
 						@method('delete')

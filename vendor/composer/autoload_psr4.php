@@ -55,6 +55,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
+    'Overtrue\\LaravelFollow\\' => array($vendorDir . '/overtrue/laravel-follow/src'),
     'Overtrue\\LaravelFavorite\\' => array($vendorDir . '/overtrue/laravel-favorite/src'),
     'NunoMaduro\\Collision\\' => array($vendorDir . '/nunomaduro/collision/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),

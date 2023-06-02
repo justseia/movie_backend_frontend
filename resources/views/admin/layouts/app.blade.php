@@ -59,6 +59,7 @@
                                 <span class="ml-3 text-sm font-light text-dark-500">Фильмы и Театры</span>
                             </a>
                         </li>
+                        @if(auth()->user()->type == 1)
                         <li>
                             <a href="{{ route('admin.users') }}" class="flex items-center py-2.5 px-4 text-base font-normal text-dark-500 rounded-lg hover:bg-gray-200  group transition-all duration-200">
                                 <div class="grid w-8 h-8 mr-1 text-center bg-white rounded-lg shadow-lg shadow-gray-300 text-dark-700 place-items-center">
@@ -67,6 +68,7 @@
                                 <span class="ml-3 text-sm font-light text-dark-500">Пользователи</span>
                             </a>
                         </li>
+                        @endif
                     </ul>
                 </div>
             </div>

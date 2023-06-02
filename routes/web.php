@@ -24,6 +24,9 @@ Route::get('/event', [App\Http\Controllers\AllController::class, 'event'])->name
 Route::get('/theater', [App\Http\Controllers\AllController::class, 'theater'])->name('theater.index');
 Route::get('/search', [App\Http\Controllers\AllController::class, 'search'])->name('search.index');
 Route::get('/back/{movie}', App\Http\Controllers\BackController::class)->name('back');
+Route::get('/about-us', [App\Http\Controllers\AllController::class, 'about_us'])->name('about-us.index');
+Route::get('/policy', [App\Http\Controllers\AllController::class, 'policy'])->name('policy.index');
+Route::get('/organizers', [App\Http\Controllers\AllController::class, 'organizers'])->name('organizers.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/all/buy/{movie}', [App\Http\Controllers\AllController::class, 'buy_ticket_index'])->name('movie.buy.index');

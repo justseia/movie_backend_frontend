@@ -15,6 +15,8 @@
                         <li class="nav-item"><a class="nav-link" href="{{ route('trailer.index') }}">Movie</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('event.index') }}">Events</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('theater.index') }}">Theaters</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('about-us.index') }}">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('policy.index') }}">Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,7 +30,6 @@
                                 <li><a href="{{ route('friend.list') }}"><i class="ti-face-smile"></i>My Friends</a></li>
                                 <li><a href="{{ route('purchased-tickets.index') }}"><i class="ti-ticket"></i>My tickets</a></li>
                                 <li><a href="{{ route('favorite.index') }}"><i class="ti-heart"></i>My Favorites</a></li>
-                                <li><a href="{{ route('privacy-policy.index') }}"><i class="ti-world"></i>Privacy Policy</a></li>
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-power-off"></i>Log Out</a></li>
                                 <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
                                     @csrf

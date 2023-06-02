@@ -12500,6 +12500,11 @@ label.error {
 .slide-wrapper .slide-one:hover .slide-image:before {
   opacity: 1;
 }
+.slide-wrapper .slide-one:hover {
+    transform: scale(1.2);
+    transition: ease 0.9s;
+    z-index: 9999;
+}
 .slide-wrapper .slide-one:after {
   content: "";
   position: absolute;

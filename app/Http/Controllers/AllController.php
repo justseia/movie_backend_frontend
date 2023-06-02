@@ -89,4 +89,19 @@ class AllController extends Controller
         $searchs = Movie::where('name', 'LIKE', '%' . request('search') . '%')->get();
         return view('search')->with(compact('searchs'));
     }
+
+    public function about_us()
+    {
+        return view('about_us');
+    }
+
+    public function policy()
+    {
+        return view('policy');
+    }
+
+    public function organizers()
+    {
+        return view('organizers');
+    }
 }

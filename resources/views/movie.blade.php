@@ -4,7 +4,7 @@
 	<div class='player-container' style="background-color: #000000;">
 		<a href="{{ route('back', $movie) }}" class="close-video-player"><i class="ti-close"></i></a>
 		<div class='player'>
-			<video id='video' src='{{ asset('assets/images/video.mp4') }}' playsinline></video>
+			<video id='video' src='{{ $movie->url }}' playsinline></video>
 			<div class='play-btn-big'></div>
 			<div class='controls'>
 				<div class="time"><span class="time-current"></span><span class="time-total"></span></div>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin\User;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Testing\Fluent\Concerns\Has;
 
 class StoreController extends Controller
 {
@@ -17,11 +19,9 @@ class StoreController extends Controller
     {
         User::create([
             'name' => $request->name,
-            'surname' => $request->surname,
-            'lastname' => $request->lastname,
-            'number' => $request->number,
-            'password' => $request->password,
-            'role_id' => $request->role_id,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'type' => $request->type,
         ]);
         return redirect()->back()
             ->with('status', '200')

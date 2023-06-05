@@ -13,24 +13,24 @@
 <div style="position: relative; padding-bottom: 105px">
     <div style="position: absolute; left: 0">
         <h3>Ezytick - Online Ticket System</h3>
-        <h4 style="width: 168px; overflow: hidden">{{\Illuminate\Support\Facades\Hash::make($ticket->name)}}</h4>
+        <h4 style="width: 168px; overflow: hidden">{{$ticket->name}}</h4>
     </div>
-    <img width="120" style="position:absolute; right: 0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="">
+    <img width="120" style="position:absolute; right: 0" src="" alt="">
 </div>
 <hr style="color: #13151f">
-{!! QrCode::size(500)->generate(route('home.show', $ticket)) !!}
 <h2>SO SHE STOOD</h2>
+{{--<p>{{ \SimpleSoftwareIO\QrCode\Facades\QrCode::size(500)->generate(route('home.show', $ticket)) }}</p>--}}
 <div style="display: flex">
-    <div style="float: left"><img src="{{$ticket->image}}" width="250" alt=""></div>
+    <div style="float: left"><img src="{{$ticket->image}}" width="250" alt="img"></div>
     <div style="float: left; margin-left: 20px">
-        <p><b> Имя: {{auth()->user()->name}}</b></p>
-        <p><b> Sector: {{$order->category_id}}</b></p>
-        <p><b> Place: {{$order->place_id}}</b></p>
-        <p><b> Price: {{$order->price}}₸</b></p>
+        <p><b> Name : {{auth()->user()->name}}</b></p>
+        <p><b> Sector: {{\App\Models\MovieOrder::where('movie_id', $ticket->id)->first()->category_id}}</b></p>
+        <p><b> Place: {{\App\Models\MovieOrder::where('movie_id', $ticket->id)->first()->place_id}}</b></p>
+        <p><b> Price: {{\App\Models\MovieOrder::where('movie_id', $ticket->id)->first()->cost}} ₸</b></p>
     </div>
 </div>
 
-<hr style="color: #13151f; margin-top: 400px">
+<hr style="color: #13151f; margin-top: 300px">
 <p style="font-size: 12px; border: 1px solid #ccc; padding: 10px"><b> Возврат билетов, инициированный покупателем</b> <br>
 
     Возврат денежных средств при отказе потребителя от посещения мероприятия и возврате билетов осуществляется с удержанием из номинальной стоимости билетов расходов, фактически понесенных организатором мероприятия на дату возврата такого билета. Сервисный сбор не возвращается. <br>

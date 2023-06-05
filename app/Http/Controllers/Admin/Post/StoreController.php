@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Post;
 
 use App\Http\Controllers\Controller;
+use App\Models\Movie;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,24 +17,19 @@ class StoreController extends Controller
 
     public function __invoke(Request $request)
     {
-        $extension = $request->file('photo')->extension();
+        $extension = $request->file('image')->extension();
         $fileName = time() . '.' . $extension;
-        $request->file('photo')->storeAs('post', $fileName, 'public');
-        $requestPhoto = route('user.index') . '/storage/post/' . $fileName;
-        Post::create([
-            'title' => $request->title,
+        $request->file('image')->storeAs('post', $fileName, 'public');
+        $requestPhoto = route('home.index') . '/storage/post/' . $fileName;
+        Movie::create([
+            'name' => $request->title,
             'body' => $request->body,
-            'views' => 0,
-            'status' => 4,
-            'photo' => $requestPhoto,
-            'privilege' => 2,
-            'category_id' => 3,
-            'user_id' => Auth::user()->id,
-            'region_id' => 1,
-            'city_id' => 1,
-            'district_id' => 1,
+            'image' => $requestPhoto,
+            'url' => '',
+            'type_id' => $request->type_id,
+            'user_id' => $request->user_id,
         ]);
-        return redirect()->route('admin.posts')
+        return redirect()->route('admin.index')
             ->with('status', '200')
             ->with('message', 'Успешно создан');
     }

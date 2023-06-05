@@ -24,8 +24,7 @@ class AllController extends Controller
     public function download(Movie $movie)
     {
         $ticket = $movie;
-        $order = MovieOrder::where('movie_id', $movie->id)->first();
-        $pdf = PDF::loadView('ticketPDF', compact('ticket', 'order'));
+        $pdf = PDF::loadView('ticketPDF', compact('ticket'));
         return $pdf->stream('ticketPDF.pdf');
     }
 

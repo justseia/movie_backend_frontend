@@ -46,10 +46,10 @@
                             </div>
                             <div class="col-span-12">
                                 <label for="settings-language" class="block mb-2 text-sm font-medium text-gray-900">Выбрать категорию</label>
-                                <select id="settings-language" name="category_id" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
-{{--                                    @foreach ($categories as $category)--}}
-{{--                                        <option value="{{ $category->id }}">{{ $category->name }}</option>--}}
-{{--                                    @endforeach--}}
+                                <select id="settings-language" name="type_id" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
+                                    <option value="1" {{ $post->type_id == 1 ? 'selected' : '' }}>Movies</option>
+                                    <option value="2" {{ $post->type_id == 2 ? 'selected' : '' }}>Events</option>
+                                    <option value="3" {{ $post->type_id == 3 ? 'selected' : '' }}>Theaters</option>
                                 </select>
                             </div>
                             <div class="col-span-6 sm:col-full">

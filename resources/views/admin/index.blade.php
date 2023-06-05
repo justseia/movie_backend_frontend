@@ -4,9 +4,7 @@
     @if(auth()->user()->type == 2)
         <div class="w-full px-6 py-6 mx-auto">
             <div>
-
                 <div class="flex flex-wrap -mx-3">
-
                     <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
                         <div class="relative flex flex-col min-w-0 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
                             <div class="flex-auto p-4">
@@ -29,7 +27,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
                         <div class="relative flex flex-col min-w-0 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
                             <div class="flex-auto p-4">
@@ -756,6 +753,14 @@
                         </nav>
                         <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">Все фильмы и театры</h1>
                     </div>
+                    <div class="block items-center sm:flex md:divide-x md:divide-gray-100">
+                        <div class="flex items-center w-full sm:justify-end">
+                            <a href="javascript:addUser()" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-blue-500 hover:bg-blue-600 sm:ml-auto hover:scale-[1.02] transition-all">
+                                <i class="fas fa-plus mr-2"></i>
+                                Добавить
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col my-6 mx-4 rounded-2xl shadow-xl shadow-gray-200">
@@ -806,6 +811,65 @@
                 </div>
             </div>
         </main>
+
+        <div id="addUserWindow" class="hidden overflow-y-auto overflow-x-hidden fixed right-0 left-0 top-4 z-50 justify-center items-center md:inset-0 h-modal sm:h-full bg-gray-100 bg-opacity-75">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 w-full max-w-2xl h-full md:h-full">
+                <div class="relative bg-white rounded-2xl shadow-lg">
+                    <div class="flex justify-between items-start p-5 rounded-t border-b">
+                        <h3 class="text-xl font-semibold">Добавить</h3>
+                        <a href="javascript:addUser()" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-full w-6 h-6 inline-flex items-center justify-center">
+                            <i class="far fa-times text-[15px]"></i>
+                        </a>
+                    </div>
+                    <form action="{{route('admin.posts.store')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="p-6 space-y-6">
+                            <div class="grid gap-5">
+                                <div>
+                                    <label for="product-name" class="block mb-2 text-sm font-medium text-gray-900">Загаловок</label>
+                                    <input type="text" name="title" id="post-confirm-title" class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5" placeholder="Загаловок" required>
+                                </div>
+                                <div>
+                                    <label class="block mb-2 text-sm font-medium text-gray-900">Выбрать категорию</label>
+                                    <select name="type_id" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
+                                        <option value="1">Movies</option>
+                                        <option value="2">Events</option>
+                                        <option value="3">Theaters</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block mb-2 text-sm font-medium text-gray-900">Выбрать пользователя</label>
+                                    <select name="user_id" class="border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5">
+                                        @foreach($users as $user)
+                                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="product-details" class="block mb-2 text-sm font-medium text-gray-900">Описание</label>
+                                    <textarea name="body" rows="6" class="block p-4 w-full text-gray-900 border border-gray-300 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300" placeholder="Описание" required></textarea>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center mt-4 w-full">
+                                <label class="flex flex-col w-full h-32 rounded border-2 border-gray-300 border-dashed cursor-pointer hover:bg-gray-50">
+                                    <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                        <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                                        </svg>
+                                        <p class="py-1 text-sm text-gray-600">Загрузите фото</p>
+                                        <p class="text-xs text-gray-500">PNG, JPG до 10MB</p>
+                                    </div>
+                                    <input accept="image/*" type="file" name="image" class="hidden" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-b border-t border-gray-200">
+                            <button type="submit" class="text-white font-medium text-sm px-5 py-2.5 text-center rounded-lg bg-blue-500 hover:scale-[1.02] transition-all">Добавить пост</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div id="deletePostWindow" class="fixed left-0 right-0 z-50 items-center justify-center hidden overflow-x-hidden overflow-y-auto bg-gray-100 bg-opacity-75 top-4 md:inset-0 h-modal sm:h-full">
             <div class="absolute w-full h-full max-w-md px-4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:h-auto">
                 <div class="relative bg-white shadow-lg rounded-2xl">

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('image');
             $table->text('url');
             $table->integer('type_id');
-            $table->integer('user_id');
+            $table->integer('user_id')->default(0);
             $table->timestamps();
         });
     }

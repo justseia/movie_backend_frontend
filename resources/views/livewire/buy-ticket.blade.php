@@ -28,7 +28,7 @@
                     </select>
                 </div>
                 <div class="col-6">
-                    <input type="number" class="form-control" placeholder="Number Card" required/>
+                    <input type="text" minlength="16" class="form-control" placeholder="Number Card" required/>
                 </div>
                 <div class="col-6">
                     <input type="text" class="form-control" placeholder="Name" required/>

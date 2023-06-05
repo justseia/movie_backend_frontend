@@ -18,7 +18,7 @@
     <img width="120" style="position:absolute; right: 0" src="" alt="">
 </div>
 <hr style="color: #13151f">
-<h2>SO SHE STOOD</h2>
+<h2>{{\App\Models\MovieOrder::where('movie_id', $ticket->id)->first()->name}}</h2>
 {{--<p>{{ \SimpleSoftwareIO\QrCode\Facades\QrCode::size(500)->generate(route('home.show', $ticket)) }}</p>--}}
 <div style="display: flex">
     <div style="float: left"><img src="{{$ticket->image}}" width="250" alt="img"></div>

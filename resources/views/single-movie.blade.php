@@ -7,8 +7,8 @@
                 <div class="col-sm-12">
                     <div class="banner-wrap justify-content-between align-items-center">
                         <div class="left-wrap">
-                            <h2 style="-webkit-line-clamp: 2;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $movie->name }}</h2>
-                            <p style="-webkit-line-clamp: 2;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $movie->body }}</p>
+                            <h2 style="-webkit-line-clamp: 2;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;font-size: 35px;">{{ $movie->name }}</h2>
+                            <p style="-webkit-line-clamp: 3;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;">{{ $movie->body }}</p>
                             <div class="row g-3" style="flex-wrap: nowrap;gap: 10px;position: absolute;z-index: 9999;">
                                 @if($movie->type_id == 1)
                                     <a href="{{ route('watch', $movie) }}" class="btn btn-lg col-4">

@@ -19,6 +19,9 @@ class IndexController extends Controller
     public function __invoke()
     {
         $movies = Movie::all();
+        if (auth()->user()->type_id == 2) {
+            $movies = Movie::where('user_id', 2)->get();
+        }
         return view('admin.posts')
             ->with(compact('movies'));
     }

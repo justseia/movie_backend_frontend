@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/video-player.css') }}">
+    @livewireStyles
 </head>
 
 <body>
@@ -89,10 +90,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     $(document).ready(function () {
-        $("#myTab a:first").tab("show"); // show last tab
+        $("#myTab a:first").tab("show");
     });
 </script>
 
+@livewireScripts
 </body>
 
 </html>

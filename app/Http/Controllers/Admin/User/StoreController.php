@@ -17,9 +17,11 @@ class StoreController extends Controller
     {
         User::create([
             'name' => $request->name,
-            'email' => $request->email,
+            'surname' => $request->surname,
+            'lastname' => $request->lastname,
+            'number' => $request->number,
             'password' => $request->password,
-            'type' => $request->type,
+            'role_id' => $request->role_id,
         ]);
         return redirect()->back()
             ->with('status', '200')

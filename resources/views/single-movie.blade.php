@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="team-slider row">
-                        @foreach($users as $user)
+                        @forelse($users as $user)
                             <div class="owl-items col-2">
                                 <a href="{{ route('profile.friend', $user->user->id) }}" class="crew-wrap">
                                     <img src="{{ $user->user->avatar }}" alt="{{ $user->user->email }}">
@@ -49,7 +49,9 @@
                                     <span style="-webkit-line-clamp: 1;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;width: 90%;">{{ $user->user->email }}</span>
                                 </a>
                             </div>
-                        @endforeach
+                        @empty
+                            <div>Not request friend</div>
+                        @endforelse
                     </div>
                 </div>
             </div>

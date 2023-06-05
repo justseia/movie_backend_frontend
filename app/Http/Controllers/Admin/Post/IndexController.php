@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Post;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Menu;
+use App\Models\Movie;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,8 @@ class IndexController extends Controller
 
     public function __invoke()
     {
-        $posts = Menu::all();
+        $movies = Movie::all();
         return view('admin.posts')
-            ->with(compact('posts'));
+            ->with(compact('movies'));
     }
 }

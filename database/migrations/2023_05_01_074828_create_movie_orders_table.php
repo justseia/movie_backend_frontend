@@ -14,6 +14,9 @@ return new class extends Migration {
             $table->id();
             $table->integer('user_id');
             $table->integer('movie_id');
+            $table->string('category_id');
+            $table->integer('place_id');
+            $table->integer('cost');
             $table->timestamps();
         });
     }

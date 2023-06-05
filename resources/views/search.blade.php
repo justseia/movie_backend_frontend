@@ -15,7 +15,7 @@
     <div class="slide-wrapper search-wrap-slide mt-4">
         <div class="container">
             <div class="row">
-                @foreach($searchs as $search)
+                @forelse($searchs as $search)
                     <div class="col-md-4 col-lg-3 mb-3">
                         <a class="slide-one" href="{{ route('home.show', $search->id) }}">
                             <div class="slide-image"><img src="{{ $search->image }}" alt="image"></div>
@@ -32,7 +32,9 @@
                             </div>
                         </a>
                     </div>
-                @endforeach
+                @empty
+                    <div>Not data</div>
+                @endforelse
             </div>
         </div>
     </div>

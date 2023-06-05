@@ -81,6 +81,8 @@
                                                 Админ
                                             @elseif($user->type == 2)
                                                 Менеджер
+                                            @elseif($user->type == 3)
+                                                Пользователь
                                             @endif
                                         </div>
                                     </td>

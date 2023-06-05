@@ -7,9 +7,28 @@ use App\Models\Movie;
 use App\Models\MovieOrder;
 use App\Models\Ticket;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Http\Request;
 
 class AllController extends Controller
 {
+    public function manager()
+    {
+        $count_films = Movie::where('user')->get();
+        $sales = MovieOrder::where('user_id', auth()->user()->id)->get();
+        return view('admin.index')
+            ->with(compact('sales'))
+            ->with(compact('count_films'));
+    }
+
+    public function download(Movie $movie)
+    {
+        $ticket = $movie;
+        $order = MovieOrder::where('movie_id', $movie->id)->first();
+        $pdf = PDF::loadView('ticketPDF', compact('ticket', 'order'));
+        return $pdf->stream('ticketPDF.pdf');
+    }
+
     public function friend()
     {
         $friends = auth()->user()->followings()->with('followable')->get();
@@ -67,26 +86,49 @@ class AllController extends Controller
         return view('purchased-tickets')->with(compact('tickets'));
     }
 
+    public function buy_ticket(Movie $movie, Request $request)
+    {
+        $ticket_price = 0;
+        if ($movie->type_id == 1) {
+            $ticket_price = 3000;
+        } elseif ($movie->type_id == 2) {
+            if ($request->category_id == 'a') {
+                $ticket_price = 2000;
+            } elseif ($request->category_id == 'b') {
+                $ticket_price = 3000;
+            } elseif ($request->category_id == 'c') {
+                $ticket_price = 3500;
+            } elseif ($request->category_id == 'd') {
+                $ticket_price = 4000;
+            } elseif ($request->category_id == 'f') {
+                $ticket_price = 4500;
+            } elseif ($request->category_id == 'g') {
+                $ticket_price = 5000;
+            } elseif ($request->category_id == 'g') {
+                $ticket_price = 5500;
+            }
+        } elseif ($movie->type_id == 3) {
+            $ticket_price = 5000;
+        }
+        MovieOrder::create([
+            'user_id' => auth()->user()->id,
+            'movie_id' => $movie->id,
+            'category_id' => $request->category_id,
+            'place_id' => $request->place_id,
+            'cost' => $ticket_price,
+        ]);
+        return redirect()->route('purchased-tickets.index');
+    }
+
+
     public function buy_ticket_index(Movie $movie)
     {
-//        $tickets = Ticket::where('movie_id', $movie->id)->get();
         return view('ticket-buy')->with(compact('movie'));
     }
 
-    public function buy_ticket(Movie $movie)
+    public function search(Request $request)
     {
-//        $hello = MovieOrder::create([
-//            ''
-//        ]);
-        auth()->user()->update([
-            'qwerty' => true,
-        ]);
-        return view('ticket-buy');
-    }
-
-    public function search()
-    {
-        $searchs = Movie::where('name', 'LIKE', '%' . request('search') . '%')->get();
+        $searchs = Movie::where('name', 'LIKE', '%' . $request->search . '%')->get();
         return view('search')->with(compact('searchs'));
     }
 

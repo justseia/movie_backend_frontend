@@ -16,7 +16,6 @@
                         <li class="nav-item"><a class="nav-link" href="{{ route('event.index') }}">Events</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('theater.index') }}">Theaters</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('about-us.index') }}">About us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('policy.index') }}">Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +43,8 @@
                         </div>
                     </a>
                 @endauth
-                <form action="{{ route('search.index') }}">
+                <form action="{{ route('search.index') }}" method="post">
+                    @csrf
                     <div class="search-div">
                         <input name="search" type="search" placeholder="Seacrh">
                     </div>

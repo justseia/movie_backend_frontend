@@ -59,7 +59,7 @@
                                         <div>
                                             <p class="mb-0 font-sans font-semibold leading-normal text-size-sm">New Clients</p>
                                             <h5 class="mb-0 font-bold">
-                                                {{ \App\Models\MovieOrder::where('user_id', auth()->user()->id)->get() }}
+                                                {{ \App\Models\MovieOrder::where('user_id', auth()->user()->id)->get()->count() }}
                                                 <span class="leading-normal text-red-600 text-size-sm font-weight-bolder">-2%</span>
                                             </h5>
                                         </div>

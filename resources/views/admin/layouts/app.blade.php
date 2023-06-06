@@ -16,7 +16,7 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center justify-start">
                 <a href="{{ route('admin.index') }}" class="ml-4 text-md font-semibold flex items-center lg:mr-1.5">
-                    <span class="self-center hidden text-xl font-bold md:inline-block whitespace-nowrap">Ezytick</span>
+                    <span class="self-center hidden text-xl font-bold md:inline-block whitespace-nowrap">Eazytick</span>
                 </a>
             </div>
             <div class="ml-3">

@@ -19,7 +19,7 @@
                     <div class="row">
                         @foreach($tickets as $ticket)
                             <div class="col-3">
-                                <a class="slide-one" href="{{ route('download', $ticket) }}">
+                                <a class="slide-one" href="{{ route('download', $ticket->movie_id) }}">
                                     <div class="slide-image"><img src="{{ $ticket->movie->image }}" alt="image"></div>
                                     <div class="slide-content">
                                         <h2 style="-webkit-line-clamp: 1;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;width: 90%;">

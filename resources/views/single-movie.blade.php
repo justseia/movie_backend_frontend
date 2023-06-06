@@ -40,11 +40,11 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="row">
+                    <div class="row" style="padding-bottom: 20px;">
                         @forelse($users as $user)
                             <div class="col-2">
                                 <a href="{{ route('profile.friend', $user->user->id) }}" class="crew-wrap">
-                                    <img src="{{ $user->us2ZCVer->avatar }}" alt="{{ $user->user->email }}">
+                                    <img src="{{ $user->user->avatar }}" alt="{{ $user->user->email }}">
                                     <span style="-webkit-line-clamp: 1;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;width: 90%;">{{ $user->user->name }}</span>
                                     <span style="-webkit-line-clamp: 1;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;width: 90%;">{{ $user->user->email }}</span>
                                 </a>

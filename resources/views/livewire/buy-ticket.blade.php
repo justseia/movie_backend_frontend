@@ -5,7 +5,7 @@
             <img src="{{ asset('assets/images/stadion_2.png') }}" alt="img" style="height: 500px;">
         </div>
         <div class="container" style="padding-top: 50px; padding-bottom: 10px;">
-            <div class="row gap-3 text-center form-group">
+            <div class="row text-center form-group">
                 <div class="col-6">
                     <select name="category_id" class="form-select" aria-label="Default select example">
                         <option selected>Select section</option>
@@ -28,7 +28,7 @@
                     </select>
                 </div>
                 <div class="col-6">
-                    <input type="text" minlength="16" class="form-control" placeholder="Number Card" required/>
+                    <input type="text" minlength="16" maxlength="16" class="form-control" placeholder="Number Card" required/>
                 </div>
                 <div class="col-6">
                     <input type="text" class="form-control" placeholder="Name" required/>
@@ -68,11 +68,21 @@
                         <option value="{{ $i }}">{{ $i }}</option>
                     @endfor
                 </select>
-                <input type="number" placeholder="Number Card" required/>
-                <input type="text" placeholder="Name" required/>
-                <input type="text" placeholder="Date" required/>
-                <input type="text" placeholder="CVC" required/>
-                <button type="submit">Buy ticket</button>
+                <div class="col-6">
+                    <input type="text" minlength="16" maxlength="16" class="form-control" placeholder="Number Card" required/>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Name" required/>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Date" required/>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="CVC" required/>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary w-100 mt-2">Buy ticket</button>
+                </div>
             </div>
         </div>
     </form>
@@ -103,11 +113,21 @@
                         <option value="{{ $i }}">{{ $i }}</option>
                     @endfor
                 </select>
-                <input type="number" placeholder="Number Card" required/>
-                <input type="text" placeholder="Name" required/>
-                <input type="text" placeholder="Date" required/>
-                <input type="text" placeholder="CVC" required/>
-                <button type="submit">Buy ticket</button>
+                <div class="col-6">
+                    <input type="text" minlength="16" maxlength="16" class="form-control" placeholder="Number Card" required/>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Name" required/>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="Date" required/>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control" placeholder="CVC" required/>
+                </div>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary w-100 mt-2">Buy ticket</button>
+                </div>
             </div>
         </div>
     </form>

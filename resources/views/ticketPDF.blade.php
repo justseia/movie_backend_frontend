@@ -4,6 +4,7 @@
         body {
             font-family: DejaVu Serif, sans-serif;
         }
+
         h2 {
             text-align: center;
         }
@@ -17,6 +18,7 @@
     </div>
     <img width="120" style="position:absolute; right: 0" src="" alt="">
 </div>
+<img width="120" style="position:absolute; right: 0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="">
 <hr style="color: #13151f">
 <h2>{{\App\Models\MovieOrder::where('movie_id', $ticket->id)->first()->name}}</h2>
 {{--<p>{{ \SimpleSoftwareIO\QrCode\Facades\QrCode::size(500)->generate(route('home.show', $ticket)) }}</p>--}}

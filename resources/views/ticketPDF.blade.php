@@ -20,7 +20,7 @@
 </div>
 <img width="120" style="position:absolute; right: 0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="">
 <hr style="color: #13151f">
-<h2>{{\App\Models\Movie::where('user', $ticket->id)->first()->name}}</h2>
+<h2>{{\App\Models\Movie::where('id', $ticket->id)->first()->name}}</h2>
 {{--<p>{{ \SimpleSoftwareIO\QrCode\Facades\QrCode::size(500)->generate(route('home.show', $ticket)) }}</p>--}}
 <div style="display: flex">
     <div style="float: left"><img src="{{$ticket->image}}" width="250" alt="img"></div>

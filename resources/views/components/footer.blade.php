@@ -11,19 +11,19 @@
                         <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6 md-mb25">
                             <h5>About us</h5>
                             <ul>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of use</a></li>
-                                <li><a href="#">Ticket return policy</a></li>
-                                <li><a href="#">Organizers and cinemas</a></li>
+                                <li><a href="{{ route('about-us.index') }}">About us</a></li>
+                                <li><a href="{{ route('policy.index') }}">Privacy Policy</a></li>
+                                <li><a href="{{ route('privacy-policy.index.index') }}">Terms of use</a></li>
+                                <li><a href="{{ route('privacy-policy.index.index') }}">Ticket return policy</a></li>
+                                <li><a href="{{ route('organizers.index') }}">Organizers and cinemas</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">
                             <h5>Categories</h5>
                             <ul>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">Concerts</a></li>
-                                <li><a href="#">Theaters</a></li>
+                                <li><a href="{{ route('trailer.index') }}">Movies</a></li>
+                                <li><a href="{{ route('event.index') }}">Concerts</a></li>
+                                <li><a href="{{ route('trailer.index') }}">Theaters</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-lg-3 col-sm-6 col-xs-6">

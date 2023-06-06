@@ -10,7 +10,7 @@
 							<li class="inline-flex items-center">
 								<a href="{{route('admin.index')}}" class="inline-flex items-center text-gray-700 hover:text-gray-900">
 									<i class="fad fa-house mr-4"></i>
-									Главный
+									{[
 								</a>
 							</li>
 							<li>

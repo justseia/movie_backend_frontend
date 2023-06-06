@@ -16,7 +16,7 @@
                                         Movie
                                     </a>
                                 @endif
-                                <form action="{{ route('home.friend', $movie) }}" method="post">
+                                <form action="{{ route('home.friend', $movie) }}" method="post" style="width:auto;">
                                     @csrf
                                     <button type="submit" class="btn btn-lg col-4">Find Friend</button>
                                 </form>
@@ -39,12 +39,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="team-slider row">
+                <div class="col-12">
+                    <div class="row">
                         @forelse($users as $user)
-                            <div class="owl-items col-2">
+                            <div class="col-2">
                                 <a href="{{ route('profile.friend', $user->user->id) }}" class="crew-wrap">
-                                    <img src="{{ $user->user->avatar }}" alt="{{ $user->user->email }}">
+                                    <img src="{{ $user->us2ZCVer->avatar }}" alt="{{ $user->user->email }}">
                                     <span style="-webkit-line-clamp: 1;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;width: 90%;">{{ $user->user->name }}</span>
                                     <span style="-webkit-line-clamp: 1;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;width: 90%;">{{ $user->user->email }}</span>
                                 </a>
@@ -84,8 +84,9 @@
                 ✅Orda - founded in 2000. Lovers of the PEOPLE!
                 The soloists of the group are Esbolat Bedelkhan, Erbolat Bedelkhan, Dastan Orazbekov and Nurlan Alymbekov.            </div>
             <div class="tab-pane fade" id="profile">
-                <h4 class="mt-2">Profile tab content</h4>
-                <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                <div style="padding: 20px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1453.244090497703!2d76.9176168!3d43.2411895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369332c238f37%3A0x7d4903079d9c75ca!2z0YPQu9C40YbQsCDQmtGD0YDQvNCw0L3Qs9Cw0LfRiyAxMDMsINCQ0LvQvNCw0YLRiyAwNTAwMDA!5e0!3m2!1sru!2skz!4v1686010635568!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </div>

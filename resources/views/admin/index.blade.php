@@ -98,6 +98,53 @@
                     </div>
                 </div>
             </div>
+            <div class="flex flex-col my-6 mx-4 rounded-2xl shadow-xl shadow-gray-200">
+                <div class="overflow-x-auto rounded-2xl">
+                    <div class="inline-block min-w-full align-middle">
+                        <div class="overflow-hidden">
+                            <table class="min-w-full divide-y divide-gray-200 table-fixed">
+                                <thead class="bg-white">
+                                <tr>
+                                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
+                                        №
+                                    </th>
+                                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
+                                        Заголовок
+                                    </th>
+                                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
+                                        Дата
+                                    </th>
+                                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase lg:p-5">
+                                        Действие
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                @foreach($movies as $movie)
+                                    <tr class="hover:bg-gray-100">
+                                        <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">#{{$movie->id}}</td>
+                                        <td class="p-4 text-sm font-normal text-gray-500 lg:p-5">
+                                            <div class="text-base font-semibold text-gray-900 w-[300px] line-clamp-1">{{$movie->name}}</div>
+                                        </td>
+                                        <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap lg:p-5">{{$movie->created_at->isoFormat('LL')}}</td>
+                                        <td class="p-4 space-x-2 whitespace-nowrap lg:p-5">
+                                            <a href="{{route('admin.posts.show', $movie)}}" class="getmovie inline-flex items-center py-2 px-3 text-sm font-medium text-center text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 hover:text-gray-900 hover:scale-[1.02] transition-all">
+                                                <i class="far fa-edit mr-2"></i>
+                                                Посмотреть
+                                            </a>
+                                            <a href="javascript:deletePost({{$movie->id}})" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-800 hover:scale-[1.02] transition-all">
+                                                <i class="fas fa-trash mr-2"></i>
+                                                Удалить
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     @endif
 

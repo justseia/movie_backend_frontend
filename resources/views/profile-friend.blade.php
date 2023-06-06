@@ -45,7 +45,7 @@
                                     <h6 class="mb-0">Full Name</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="text" class="form-control" value="John Doe" disabled>
+                                    <input type="text" class="form-control" value="{{$user{$movie->name}}" disabled>
                                 </div>
                             </div>
                             <div class="row mb-3">

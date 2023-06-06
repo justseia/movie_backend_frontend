@@ -19,7 +19,7 @@ Auth::routes();
 Route::get('/', App\Http\Controllers\Movie\IndexController::class)->name('home.index');
 Route::get('/all/watch/{movie}', App\Http\Controllers\Movie\WatchController::class)->name('watch');
 Route::get('/all/{movie}', App\Http\Controllers\Movie\ShowController::class)->name('home.show');
-Route::get('/trailer', [App\Http\Controllers\AllController::class, 'trailer'])->name('trailer.index');
+Route::get('/movies', [App\Http\Controllers\AllController::class, 'trailer'])->name('trailer.index');
 Route::get('/event', [App\Http\Controllers\AllController::class, 'event'])->name('event.index');
 Route::get('/theater', [App\Http\Controllers\AllController::class, 'theater'])->name('theater.index');
 Route::post('/search', [App\Http\Controllers\AllController::class, 'search'])->name('search.index');

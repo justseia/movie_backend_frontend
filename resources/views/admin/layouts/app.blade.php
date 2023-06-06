@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ezytick</title>
     <link rel="icon" href="{{ asset('assets/images/favicon.png') }}">
-    @vite('resources/css/app.css')
+{{--    @vite('resources/css/app.css')--}}
     <link rel="stylesheet" href="{{ asset('build/assets/app-8a6d422d.css') }}">
     <script src="{{ asset('build/assets/app-0d91dc04.js') }}"></script>
 </head>

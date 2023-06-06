@@ -14,16 +14,17 @@
 <div style="position: relative; padding-bottom: 105px">
     <div style="position: absolute; left: 0">
         <h3>Eazytick - Online Ticket System</h3>
-        <h4 style="width: 188px; overflow: hidden">{{$ticket->name}}</h4>
+        <h4 style="width: 168px; overflow: hidden">{{$ticket->name}}</h4>
     </div>
     <img width="120" style="position:absolute; right: 0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="">
-
 </div>
 <hr style="color: #13151f">
 <h2>{{\App\Models\Movie::where('id', $ticket->id)->first()->name}}</h2>
 {{--<p>{{ \SimpleSoftwareIO\QrCode\Facades\QrCode::size(500)->generate(route('home.show', $ticket)) }}</p>--}}
 <div style="display: flex">
-    <div style="float: left"><img src="{{$ticket->image}}" width="250" alt="img"></div>
+    <div style="float: left">
+        <img src="{{$ticket->image}}" width="250" alt="img">
+    </div>
     <div style="float: left; margin-left: 20px">
         <p><b> Name : {{auth()->user()->name}}</b></p>
         <p><b> Sector: {{\App\Models\MovieOrder::where('movie_id', $ticket->id)->first()->category_id}}</b></p>
